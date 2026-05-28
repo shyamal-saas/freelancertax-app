@@ -219,13 +219,11 @@ if st.session_state.get("authentication_status") == True:
             """,
             unsafe_allow_html=True
         )
+st.link_button("⚠️ UPGRADE TO PREMIUM ($10/mo)","https://freelancertaxapp.lemonsqueezy.com/checkout/buy/3646b01b-777f-4d64-91b1-caf1f8bb645e" , use_container_width=True)
 
     
         
-        if st.button("🔔 UPGRADE TO PREMIUM ($10/mo)", use_container_width=True):
-            st.session_state.is_paid = True
-            st.success("Payment Successful! Access Granted.")
-            st.rerun()
+       
             
         st.stop()
         if not st.session_state.is_paid:
