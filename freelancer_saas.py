@@ -220,12 +220,12 @@ if st.session_state.get("authentication_status") == True:
             unsafe_allow_html=True
         )
 st.link_button("⚠️ UPGRADE TO PREMIUM ($10/mo)","https://freelancertaxapp.lemonsqueezy.com/checkout/buy/3646b01b-777f-4d64-91b1-caf1f8bb645e" , use_container_width=True)
-
+st . stop()
     
         
        
             
-        st.stop()
+       
         if not st.session_state.is_paid:
             remaining = 5 - st.session_state.invoice_count
             st.success(f"🎁 **Free Trial Active:** You have **{remaining} out of 5** free calculations remaining.")
