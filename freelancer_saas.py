@@ -261,7 +261,7 @@ pdf.cell(200, 10, txt=f"Annual Income: ${income_input}", ln=True)
 pdf.cell(200,10, txt=f"Calculated Tax Due: ${final_tax}", ln=True)
 net_income = income_input - final_tax
 pdf.cell(200, 10, txt=f"Net Income (Take-Home Pay): ${net_income}", ln=True)
-st.download_button(label="Download PDF Invoice", data=bytes(pdf.output()), file_name="tax_invoice.pdf", mime="application/pdf")
+st.download_button(label="Download PDF Invoice", data=pdf.output(), file_name="tax_invoice.pdf", mime="application/pdf")
 st.markdown("---")
 st.caption("ℹ️ :red[**Disclaimer: This app provides estimated tax calculations for informational purposes only. Please consult a certified tax professional or accountant in your country for official tax filings and legal compliance.**]")
 st.session_state.invoice_count += 1
