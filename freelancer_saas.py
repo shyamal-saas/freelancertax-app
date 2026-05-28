@@ -226,10 +226,7 @@ st . stop()
        
             
        
-        if not st.session_state.is_paid:
-            remaining = 5 - st.session_state.invoice_count
-            st.success(f"🎁 **Free Trial Active:** You have **{remaining} out of 5** free calculations remaining.")
-            st.progress(st.session_state.invoice_count / 5)
+      
 
     
 
