@@ -231,7 +231,7 @@ st . stop()
     
 
     
-elif st.session_state["authentication_status"] is False:
+if st.session_state["authentication_status"] is False:
     st.error('Username/password is incorrect')
     st.stop()
 elif st.session_state["authentication_status"] is None:
